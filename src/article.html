@@ -1,0 +1,65 @@
+{% set title = "Вторая страница" %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="page" id="second">
+    <div class="page__wrap">
+      {% block header %}
+      {% include "includes/header.html" %}
+      {% endblock %}
+      <main class="main">
+        <div class="container">
+          <div class="main__content">
+            <h1 class="main__title title">
+              {{ title }}
+            </h1>
+            {% block content %}
+            <p class="main__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ea aut aspernatur illo? Amet itaque
+              voluptatum vitae, consequuntur sequi quis, similique aliquid alias accusantium veniam autem. Suscipit
+              ullam praesentium accusantium, soluta maiores tempore minima mollitia incidunt architecto a? Provident
+              debitis atque, quo voluptates quos sunt adipisci deleniti ex itaque nostrum explicabo sequi temporibus
+              magni error numquam, officia reiciendis dolorum aperiam labore delectus inventore corporis? Quisquam omnis
+              dolorem recusandae aperiam ex necessitatibus praesentium accusamus et, ea voluptatibus inventore laborum
+              nostrum vitae earum, nemo tenetur laudantium iure rerum libero odit autem magni.
+            </p>
+            <p class="main__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ea aut aspernatur illo? Amet itaque
+              voluptatum vitae, consequuntur sequi quis, similique aliquid alias accusantium veniam autem. Suscipit
+              debitis atque, quo voluptates quos sunt adipisci deleniti ex itaque nostrum explicabo sequi temporibus
+              magni error numquam, officia reiciendis dolorum aperiam labore delectus inventore corporis? Quisquam omnis
+              dolorem recusandae aperiam ex necessitatibus praesentium accusamus et, ea voluptatibus inventore laborum
+              nostrum vitae earum, nemo tenetur laudantium iure rerum libero odit autem magni.
+            </p>
+            <p class="main__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ea aut aspernatur illo? Amet itaque
+              voluptatum vitae, consequuntur sequi quis, similique aliquid alias accusantium veniam autem. Suscipit
+              ullam praesentium accusantium, soluta maiores tempore minima mollitia incidunt architecto a? Provident
+            </p>
+            <p class="main__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ea aut aspernatur illo? Amet itaque
+              voluptatum vitae, consequuntur sequi quis, similique aliquid alias accusantium veniam autem. Suscipit
+              ullam praesentium accusantium, soluta maiores tempore minima mollitia incidunt architecto a? Provident
+            </p>
+            {% endblock %}
+          </div>
+        </div>
+      </main>
+      {% block footer %}
+      {% include "includes/footer.html" %}
+      {% endblock %}
+    </div>
+  </div>
+</body>
+
+
+</html>

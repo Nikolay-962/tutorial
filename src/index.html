@@ -1,0 +1,75 @@
+{% set title = "Первая страница"%}
+{% import "includes/macros.html" as macro %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+{% block content %}
+
+<body>
+  <div class="page">
+    <div class="page__wrap">
+      {% block header %}
+      {% include "includes/header.html" %}
+      {% endblock %}
+
+      <main class="main">
+        <div class="container">
+          <div class="main__content content">
+            <h1 class="content__title title title--two">
+              {{ title }}
+            </h1>
+            <div class="content__wrap">
+              <section class="content__item">
+                <div class="section-one">
+                  <div class="section-one__cards">
+                    <div class="section-one__card">
+                      {{ macro.card('https://picsum.photos/id/1/5616/3744', 'Первая карточка', 'Достаточно краткое
+                      описание для <strong>первой</strong> карточки')}}
+                    </div>
+                    <div class="section-one__card">
+                      {{ macro.card('https://picsum.photos/id/1001/5616/3744', 'Вторая карточка',  'Достаточно краткое описание для <strong>ворой</strong> карточки')}}
+                    </div>
+                    <div class="section-one__card">
+                      {{ macro.card('https://picsum.photos/id/1010/5184/3456', 'Третья карточка',  'Достаточно краткое описание для <strong>третьей</strong> карточки')}}
+                    </div>
+                    <div class="section-one__card">
+                      {{ macro.card('https://picsum.photos/id/1012/3973/2639', 'Четвёртая карточка',  'Достаточно краткое описание для <strong>первой</strong> карточки')}}
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="content__item section-two">
+                <p class="main__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ea aut aspernatur illo? Amet itaque
+                  voluptatum vitae, consequuntur sequi quis, similique aliquid alias accusantium veniam autem. Suscipit
+                  ullam praesentium accusantium, soluta maiores tempore minima mollitia incidunt architecto a? Provident
+                  debitis atque, quo voluptates quos sunt adipisci deleniti ex itaque nostrum explicabo
+                </p>
+              </section>
+              <section class="content__item section-three">
+                <p class="main__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ea aut aspernatur illo? Amet itaque
+                  voluptatum vitae, consequuntur sequi quis, similique aliquid alias accusantium veniam autem. Suscipit
+                  ullam praesentium accusantium, soluta maiores tempore minima mollitia incidunt architecto a? Provident
+                  debitis atque, quo voluptates quos sunt adipisci deleniti ex itaque nostrum explicabo
+                </p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      {% block footer %}
+      {% include "includes/footer.html" %}
+      {% endblock %}
+    </div>
+  </div>
+</body>
+{% endblock %}
+
+</html>
