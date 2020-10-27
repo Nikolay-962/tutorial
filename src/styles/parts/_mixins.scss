@@ -7,7 +7,7 @@ $j-sa: space-around;
 $a-fs: flex-start;
 $a-end: flex-end;
 $a-center: center;
-$a-bl: baselie;
+
 $a-st: stretch;
 
 @mixin flex($flex-j: $j-fs, $flex-a: $a-st) {
