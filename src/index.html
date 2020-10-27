@@ -1,14 +1,7 @@
+{% extends "templates/default.html" %}
 {% set title = "Первая страница"%}
 {% import "includes/macros.html" as macro %}
-<!DOCTYPE html>
-<html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="css/main.css">
-</head>
 {% block content %}
 
 <body>
@@ -17,7 +10,6 @@
       {% block header %}
       {% include "includes/header.html" %}
       {% endblock %}
-
       <main class="main">
         <div class="container">
           <div class="main__content content">
@@ -30,16 +22,16 @@
                   <div class="section-one__cards">
                     <div class="section-one__card">
                       {{ macro.card('https://picsum.photos/id/1/5616/3744', 'Первая карточка', 'Достаточно краткое
-                      описание для <strong>первой</strong> карточки')}}
+                      описание для <b>первой</b> карточки')}}
                     </div>
                     <div class="section-one__card">
-                      {{ macro.card('https://picsum.photos/id/1001/5616/3744', 'Вторая карточка',  'Достаточно краткое описание для <strong>ворой</strong> карточки')}}
+                      {{ macro.card('https://picsum.photos/id/1001/5616/3744', 'Вторая карточка',  'Достаточно краткое описание для <b>ворой</b> карточки')}}
                     </div>
                     <div class="section-one__card">
-                      {{ macro.card('https://picsum.photos/id/1010/5184/3456', 'Третья карточка',  'Достаточно краткое описание для <strong>третьей</strong> карточки')}}
+                      {{ macro.card('https://picsum.photos/id/1010/5184/3456', 'Третья карточка',  'Достаточно краткое описание для <b>третьей</b> карточки')}}
                     </div>
                     <div class="section-one__card">
-                      {{ macro.card('https://picsum.photos/id/1012/3973/2639', 'Четвёртая карточка',  'Достаточно краткое описание для <strong>первой</strong> карточки')}}
+                      {{ macro.card('https://picsum.photos/id/1012/3973/2639', 'Четвёртая карточка',  'Достаточно краткое описание для <b>четвёртой</b> карточки')}}
                     </div>
                   </div>
                 </div>
