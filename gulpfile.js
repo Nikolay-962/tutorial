@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var nunjucks = require('gulp-nunjucks');
 var sass = require('gulp-sass');
 var browsersync = require('browser-sync');
-var image = require('gulp-image');
+var changed = require('gulp-changed');
 var del = require('del');
 var reload = browsersync.reload;
 
@@ -61,10 +61,10 @@ function styles() {
 function image() {
   return gulp
     .src(path.src.img)
-    .pipe(canged(path.build.img))
+    .pipe(changed(path.build.img))
     .pipe(gulp.dest(path.build.img))
-    .pipe(reload({ stream: true }))
-}
+    .pipe(reload({ stream: true }));
+};
 
 function watchFiles() {
   gulp.watch([path.watch.html], html);

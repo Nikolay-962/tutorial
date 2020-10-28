@@ -74,20 +74,27 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 16px;
+  }
+  &__card {
+    
   } 
 }
 .card {
   background-color: #cccccc;
   border-radius: 10px;
+  height: 100%;
   &__wrap {
-    padding: 10px;  
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;  
   }
 }
 .visual { 
   overflow: hidden;  
   &__img {
-    max-width: 248px;
-    max-height: 180px;
+    width: 100%;
   }
 }
 .button {

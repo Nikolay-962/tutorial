@@ -1,20 +1,22 @@
 {% macro card(img_src, title = "", text = "", description = "")%}
-<div class="card">
-  <div class="card__wrap">
-    <div class="card__vasual visual">
-      <div class="visual__cover">
-        <img src="{{ img_src }}" alt="{{alt}}" class="visual__img">
+<div class="section-one__card">
+  <div class="card">
+    <div class="card__wrap">
+      <div class="card__vasual visual">
+        <div class="visual__cover">
+          <img src="{{ img_src }}" alt="{{alt}}" class="visual__img">
+        </div>
       </div>
-    </div>
-    <h3 class="card__title">
-      {{ title }}
-    </h3>
-    <div class="card__text">
-      {{ text | safe }}
-    </div>
-    <div class="card__button">
-      <div class="button">
-        <a href="#" class="button__link">Подробнее</a>
+      <h3 class="card__title">
+        {{ title }}
+      </h3>
+      <div class="card__text">
+        {{ text | safe }}
+      </div>
+      <div class="card__button">
+        <div class="button">
+          <a href="#" class="button__link">Подробнее</a>
+        </div>
       </div>
     </div>
   </div>
