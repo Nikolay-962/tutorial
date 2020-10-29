@@ -85,7 +85,15 @@ body {
 
 .visual {
   overflow: hidden; }
+  .visual__cover {
+    position: relative;
+    padding-top: 67%; }
   .visual__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%; }
 
 .button {
