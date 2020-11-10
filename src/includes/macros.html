@@ -1,10 +1,10 @@
-{% macro card(img_src, title = "", text = "", description = "")%}
+{% macro card(src, title, text, alt)%}
 <div class="section-one__card">
   <div class="card">
     <div class="card__wrap">
       <div class="card__vasual visual">
         <div class="visual__cover">
-          <img src="{{ img_src }}" alt="{{alt}}" class="visual__img">
+          <img src="{{ src }}" alt="{{ alt }}" class="visual__img">
         </div>
       </div>
       <h3 class="card__title">

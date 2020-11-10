@@ -1,7 +1,19 @@
 {% extends "templates/default.html" %}
 {% set title = "Первая страница"%}
 {% import "includes/macros.html" as macro %}
+{% set itemCards = [
+  {src:'img/image-2.jpg', title:'Заголовок для первой карточки', 
+  text:'Достаточно краткое описание для <b>первой</b> карточки', alt: 'мужик за компом'},
 
+  {src:'img/image-3.jpg', title:"Вторая карточка", 
+  text:'Достаточно краткое описание для <b>второй</b> карточки', alt: 'мужик за компом'},
+
+  {src:'img/image-4.jpg', title: "Третья карточка", 
+  text:'Достаточно краткое описание для <b>третьей</b> карточки', alt: 'мужик за компом'},
+
+  {src:'img/image-5.jpg', title:"Четвертая карточка", 
+  text:'Достаточно краткое описание для <b>четвёртой</b> карточки', alt: 'мужик за компом'}
+  ] %}
 
 {% block content %}
 
@@ -21,14 +33,9 @@
               <section class="content__item">
                 <div class="section-one">
                   <div class="section-one__cards">
-                    {{ macro.card('img/image-2.jpg', 'Заголовок для первой карточка', 'Достаточно краткое
-                      описание для <b>первой</b> карточки')}}
-
-                    {{ macro.card('img/image-3.jpg', 'Вторая карточка',  'Достаточно краткое описание для <b>ворой</b> карточки')}}
-
-                    {{ macro.card('img/image-4.jpg', 'Третья карточка',  'Достаточно краткое описание для <b>третьей</b> карточки')}}
-
-                    {{ macro.card('img/image-5.jpg', 'Четвёртая карточка',  'Достаточно краткое описание для <b>четвёртой</b> карточки')}}
+                    {% for item in itemCards %}
+                    {{ macro.card(item.src, item.title, item.text, item.alt) }}
+                    {% endfor %}
                   </div>
                 </div>
               </section>
